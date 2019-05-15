@@ -5,6 +5,7 @@
  */
 package datastructures_._algorithms;
 
+import com.algorithms.sorting.Insertion;
 import com.algorithms.sorting.Selection;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,16 +25,18 @@ public class DataStructures__Algorithms {
     public static void main(String[] args) throws FileNotFoundException {
         File file= new File("Selection.txt");
         Scanner sc= new Scanner(file);
-        List<Integer> list=new ArrayList<>();
-        int [] a= new int[16];
+        Comparable<String> comparable = (Comparable<String>)(new String());
         int count=0;
-        while(sc.hasNextInt()){
-            a[count]=sc.nextInt();
-            count++;
+        while(sc.hasNextLine()){
+            comparable=sc.nextLine();
         }
         
-        Selection.sort(a);
-        Selection.show(a);
+      
+        
+       // Insertion.sort(comparable);
+       // Insertion.show(comparable);
+        
+       
         
     }
     
