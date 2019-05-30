@@ -7,7 +7,9 @@ package datastructures_._algorithms;
 
 import com.algorithms.sorting.Data;
 import com.algorithms.sorting.Insertion;
+import com.algorithms.sorting.Mergesort;
 import com.algorithms.sorting.Selection;
+import com.algorithms.sorting.Shellsort;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -24,10 +26,13 @@ public class DataStructures__Algorithms {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException {
-        
-        Integer[] integerArray={100,45,87,194,33,87,43,6,78,90,43};
-        Selection.sort(integerArray);
-        Selection.show(integerArray);
+       Scanner sc= new Scanner(new File("graph.txt"));
+       int v=sc.nextInt();
+       int w=sc.nextInt();
+       
+//        System.out.println(">>"+v);
+//        System.out.println(">>"+w n);
+       
     }
     
 }

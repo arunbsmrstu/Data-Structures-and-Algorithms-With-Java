@@ -1,3 +1,5 @@
+package com.algorithoms.bag;
+
 /******************************************************************************
  *  Compilation:  javac Bag.java
  *  Execution:    java Bag < input.txt
