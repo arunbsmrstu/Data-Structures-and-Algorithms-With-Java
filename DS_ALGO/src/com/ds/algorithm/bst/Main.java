@@ -22,10 +22,12 @@ public class Main {
 //        binarySearchTree.levelOrderTravers(binarySearchTree.root);
 //        binarySearchTree.search(binarySearchTree.root,45);
 
-        System.out.println("\nLevel Order Travers");
-        binarySearchTree.levelOrderTravers(binarySearchTree.root);
-        binarySearchTree.deleteNode(binarySearchTree.root,70);
-        System.out.println("\nLevel Order Travers");
-        binarySearchTree.levelOrderTravers(binarySearchTree.root);
+//        System.out.println("\nLevel Order Travers");
+//        binarySearchTree.levelOrderTravers(binarySearchTree.root);
+//        binarySearchTree.deleteNode(binarySearchTree.root,70);
+//        System.out.println("\nLevel Order Travers");
+//        binarySearchTree.levelOrderTravers(binarySearchTree.root);
+
+        binarySearchTree.levelWisePrint(binarySearchTree.root);
     }
 }

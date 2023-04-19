@@ -117,4 +117,26 @@ public class BinarySearchTree {
         }
         return root;
     }
+
+    public void levelWisePrint(BinaryNode root){
+        if(root==null)
+            return;
+        Queue<BinaryNode> queue= new LinkedList<BinaryNode>();
+        queue.add(root);
+        int level=0;
+        while (!queue.isEmpty()){
+            int size=queue.size();
+            for(int i=0;i<size;i++){
+                BinaryNode temp= queue.remove();
+                System.out.println("Level :"+level+" value: "+temp.value);
+                if(temp.left!=null){
+                    queue.add(temp.left);
+                }
+                if(temp.right!=null){
+                    queue.add(temp.right);
+                }
+            }
+            level++;
+        }
+    }
 }
