@@ -18,5 +18,7 @@ public class Main {
         binarySearchTree.inOrderTravers(binarySearchTree.root);
         System.out.println("\nPost Order Travers");
         binarySearchTree.postOrderTravers(binarySearchTree.root);
+        System.out.println("\nLevel Order Travers");
+        binarySearchTree.levelOrderTravers(binarySearchTree.root);
     }
 }

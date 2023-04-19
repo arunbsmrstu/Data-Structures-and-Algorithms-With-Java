@@ -1,5 +1,8 @@
 package com.ds.algorithm.bst;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
     public BinaryNode root;
 
@@ -46,5 +49,23 @@ public class BinarySearchTree {
         postOrderTravers(binaryNode.left);
         postOrderTravers(binaryNode.right);
         System.out.print(binaryNode.value +" ->");
+    }
+
+    public void levelOrderTravers(BinaryNode binaryNode){
+        if(binaryNode==null)
+            return;
+        Queue<BinaryNode> queue= new LinkedList<>();
+        queue.add(binaryNode);
+        while (!queue.isEmpty()){
+            BinaryNode temp=queue.remove();
+            System.out.print(temp.value+"->");
+            if(temp.left!=null){
+                queue.add(temp.left);
+            }
+            if(temp.right!=null){
+                queue.add(temp.right);
+            }
+
+        }
     }
 }
