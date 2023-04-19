@@ -12,12 +12,19 @@ public class Main {
         binarySearchTree.insert(100);
         binarySearchTree.insert(20);
         binarySearchTree.insert(40);
-        System.out.println("\nPre Order Travers");
-        binarySearchTree.preOrderTravers(binarySearchTree.root);
-        System.out.println("\nIn Order Travers");
-        binarySearchTree.inOrderTravers(binarySearchTree.root);
-        System.out.println("\nPost Order Travers");
-        binarySearchTree.postOrderTravers(binarySearchTree.root);
+//        System.out.println("\nPre Order Travers");
+//        binarySearchTree.preOrderTravers(binarySearchTree.root);
+//        System.out.println("\nIn Order Travers");
+//        binarySearchTree.inOrderTravers(binarySearchTree.root);
+//        System.out.println("\nPost Order Travers");
+//        binarySearchTree.postOrderTravers(binarySearchTree.root);
+//        System.out.println("\nLevel Order Travers");
+//        binarySearchTree.levelOrderTravers(binarySearchTree.root);
+//        binarySearchTree.search(binarySearchTree.root,45);
+
+        System.out.println("\nLevel Order Travers");
+        binarySearchTree.levelOrderTravers(binarySearchTree.root);
+        binarySearchTree.deleteNode(binarySearchTree.root,70);
         System.out.println("\nLevel Order Travers");
         binarySearchTree.levelOrderTravers(binarySearchTree.root);
     }

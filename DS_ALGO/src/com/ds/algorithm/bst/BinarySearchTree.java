@@ -68,4 +68,53 @@ public class BinarySearchTree {
 
         }
     }
+
+    public BinaryNode search(BinaryNode binaryNode,int value){
+        if(binaryNode==null){
+            System.out.println("Value : "+value+" is not found in BST !");
+            return null;
+        }
+        if(binaryNode.value==value){
+            System.out.println("Value : "+value+" is found in BST !");
+            return binaryNode;
+        }
+
+        if(value<binaryNode.value){
+           return search(binaryNode.left,value);
+        }else{
+            return  search(binaryNode.right,value);
+        }
+    }
+
+    private BinaryNode minimumNode(BinaryNode binaryNode){
+        if(binaryNode.left==null)
+            return binaryNode;
+        else
+            return minimumNode(binaryNode.left);
+    }
+
+    public BinaryNode deleteNode(BinaryNode root,int value){
+        if(root==null){
+            System.out.println(value +" is not found in bst");
+        }
+        if(value<root.value){
+            root.left=deleteNode(root.left,value);
+        }else if(value>root.value){
+            root.right=deleteNode(root.right,value);
+        }else{
+            if(root.left!=null && root.right!=null){
+                BinaryNode temp=root;
+                BinaryNode minimumNode=minimumNode(temp.right);
+                root.value=minimumNode.value;
+                root.right=deleteNode(root.right,minimumNode.value);
+            }else if(root.left!=null){
+                root=root.left;
+            }else if(root.right!=null){
+                root=root.right;
+            }else{
+                root=null;
+            }
+        }
+        return root;
+    }
 }
